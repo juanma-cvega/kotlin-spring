@@ -2,6 +2,7 @@ package com.jusoft.kotlinspring.component
 
 
 import com.jusoft.kotlinspring.ComponentConfig
+import com.jusoft.kotlinspring.DatasourceConfig
 import com.jusoft.kotlinspring.SpringConfig
 import com.jusoft.kotlinspring.TestContainersConfig
 import io.kotest.extensions.spring.SpringExtension
@@ -11,8 +12,8 @@ import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.context.ContextConfiguration
 
 @SpringBootTest
-@ActiveProfiles(profiles = ["spring","testcontainers"])
-@ContextConfiguration(classes = [SpringConfig::class, TestContainersConfig::class, ComponentConfig::class])
+@ActiveProfiles(profiles = ["spring","datasource-testcontainers"])
+@ContextConfiguration(classes = [DatasourceConfig::class, SpringConfig::class, TestContainersConfig::class, ComponentConfig::class])
 @EntityScan(basePackages = ["com.jusoft.persistence"])
 class MyComponentSpringTest : MyComponentAbstractTest() {
     init {
