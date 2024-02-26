@@ -6,7 +6,7 @@ import javax.sql.DataSource
 
 object DatasourceSingleton {
 
-    var datasource: DataSource = config("jdbc:postgresql://localhost:5432/sample", "org.postgresql.Driver", "toto", "toto")
+    var datasource: DataSource = config("jdbc:postgresql://postgres:5432/sample", "org.postgresql.Driver", "toto", "toto")
 
     private fun config(url: String, driver: String, username: String, password: String, ): DataSource {
         val config = HikariConfig()

@@ -3,6 +3,7 @@ on: [push]
 jobs:
   test:
     runs-on: [ubuntu-latest]
+    container: zenika/kotlin
     env:
       ACTIONS_RUNNER_PRINT_LOG_TO_STDOUT: true
     services:
