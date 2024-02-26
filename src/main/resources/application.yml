@@ -11,3 +11,10 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     database: postgresql
     show-sql: true
+  data:
+    jpa:
+      repositories:
+        enabled: true
+logging:
+  level:
+    org: info
