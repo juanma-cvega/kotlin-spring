@@ -15,7 +15,6 @@ java {
     sourceCompatibility = JavaVersion.VERSION_21
 }
 
-
 repositories {
     mavenCentral()
 }
@@ -47,5 +46,8 @@ tasks.withType<KotlinCompile> {
 }
 
 tasks.withType<Test> {
+    this.testLogging {
+        this.showStandardStreams = true
+    }
     useJUnitPlatform()
 }

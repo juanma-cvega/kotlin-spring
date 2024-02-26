@@ -32,4 +32,4 @@ jobs:
       - name: Setup with Gradle
         uses: gradle/gradle-build-action@v2
       - name: Build with Gradle
-        run: ./gradlew test
+        run: ./gradlew clean test
