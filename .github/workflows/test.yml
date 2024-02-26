@@ -9,6 +9,7 @@ jobs:
         env:
           POSTGRES_PASSWORD: postgres
           POSTGRES_USERNAME: postgres
+          PGUSER: postgres
           POSTGRES_DB: sample
         options: >-
           --health-cmd pg_isready 
