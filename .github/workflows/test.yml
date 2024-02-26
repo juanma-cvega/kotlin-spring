@@ -3,7 +3,6 @@ on: [push]
 jobs:
   test:
     runs-on: [ubuntu-latest]
-    container: golang
     env:
       ACTIONS_RUNNER_PRINT_LOG_TO_STDOUT: true
     services:
@@ -12,6 +11,7 @@ jobs:
         env:
           POSTGRES_PASSWORD: toto
           POSTGRES_USERNAME: toto
+          PGUSER: toto
           POSTGRES_PORT: 5432
           POSTGRES_DB: sample
         options: >-
