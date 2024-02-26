@@ -7,7 +7,7 @@ jobs:
       ACTIONS_RUNNER_PRINT_LOG_TO_STDOUT: true
     services:
       postgres:
-        image: postgres
+        image: postgres:16.1
         env:
           POSTGRES_PASSWORD: toto
           POSTGRES_USERNAME: toto
