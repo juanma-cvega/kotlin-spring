@@ -3,16 +3,12 @@ on: [push]
 jobs:
   test:
     runs-on: [ubuntu-latest]
-    env:
-      ACTIONS_RUNNER_PRINT_LOG_TO_STDOUT: true
     services:
       postgres:
         image: postgres:16.1
         env:
           POSTGRES_PASSWORD: postgres
           POSTGRES_USERNAME: postgres
-          PGUSER: postgres
-          POSTGRES_PORT: 5432
           POSTGRES_DB: sample
         options: >-
           --health-cmd pg_isready 
