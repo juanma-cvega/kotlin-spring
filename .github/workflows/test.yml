@@ -9,9 +9,9 @@ jobs:
       postgres:
         image: postgres:16.1
         env:
-          POSTGRES_PASSWORD: toto
-          POSTGRES_USERNAME: toto
-          PGUSER: toto
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_USERNAME: postgres
+          PGUSER: postgres
           POSTGRES_PORT: 5432
           POSTGRES_DB: sample
         options: >-
