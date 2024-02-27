@@ -1,5 +1,7 @@
 name: Testcontainers
 on: [push]
+env:
+  POSTGRES_PASSWORD: servicecontainer
 jobs:
   test:
     runs-on: [ubuntu-latest]
@@ -7,7 +9,7 @@ jobs:
       postgres:
         image: postgres:16.1
         env:
-          POSTGRES_PASSWORD: postgres
+          POSTGRES_PASSWORD: ${{env.POSTGRES_PASSWORD}}
           POSTGRES_USERNAME: postgres
           PGUSER: postgres
           POSTGRES_DB: sample
@@ -32,4 +34,5 @@ jobs:
       - name: Build with Gradle
         env:
           SPRING_PROFILES_ACTIVE: spring,datasource-config
+          SPRING_DATASOURCE_PASSWORD: {{env.POSTGRES_PASSWORD}}
         run: ./gradlew clean test
