@@ -2,10 +2,8 @@ package com.jusoft.kotlinspring.component
 
 
 import io.kotest.extensions.spring.SpringExtension
-import org.springframework.test.context.ActiveProfiles
 
-@ActiveProfiles(profiles = ["exposed","datasource-testcontainers"])
-class MyComponentExposedTest : MyComponentAbstractTest() {
+class MyComponentTest : MyComponentAbstractTest() {
     init {
         extension(SpringExtension)
 
