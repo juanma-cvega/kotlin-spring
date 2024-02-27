@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: exposed,datasource-config
+    active: exposed,datasource-testcontainers
   datasource:
     jdbcUrl: jdbc:postgresql://localhost:5432/sample
     username: postgres

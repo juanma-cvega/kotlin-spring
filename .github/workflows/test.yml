@@ -30,4 +30,6 @@ jobs:
       - name: Setup with Gradle
         uses: gradle/gradle-build-action@v2
       - name: Build with Gradle
-        run: ./gradlew clean test
+        env:
+          SPRING_PROFILES_ACTIVE: spring,datasource-config
+        run: ./gradlew clean test --args='--spring.profiles.active=spring,datasource-config'
