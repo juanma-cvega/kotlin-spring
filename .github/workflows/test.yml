@@ -32,4 +32,4 @@ jobs:
       - name: Build with Gradle
         env:
           SPRING_PROFILES_ACTIVE: spring,datasource-config
-        run: ./gradlew clean test --args='--spring.profiles.active=spring,datasource-config'
+        run: ./gradlew clean test
