@@ -34,5 +34,5 @@ jobs:
       - name: Build with Gradle
         env:
           SPRING_PROFILES_ACTIVE: spring,datasource-config
-          SPRING_DATASOURCE_PASSWORD: postgres
+          SPRING_DATASOURCE_PASSWORD: ${{env.POSTGRES_PASSWORD}}
         run: ./gradlew clean test
