@@ -4,9 +4,7 @@ import com.jusoft.kotlinspring.component.MyComponentRepository
 import com.jusoft.kotlinspring.persistence.MyComponentSpringBaseRepository
 import com.jusoft.kotlinspring.persistence.MyComponentSpringRepositoryImpl
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.boot.context.properties.EnableConfigurationProperties
-import org.springframework.boot.jdbc.DataSourceBuilder
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.Profile
